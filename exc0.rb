@@ -243,7 +243,7 @@ five_percent_more_students.delete_at(1)
 cohort_display(five_percent_more_students)
 
 # total_students = 0
-# five_percent_more_students.each {|cohort, students| total_students += students}
+# five_percent_more_students.each {|_cohort, students| total_students += students}
 # p total_students
 
 staff = {
@@ -254,5 +254,6 @@ staff = {
   admin: 45,
   HR: 453,
 }
-
 cohort_display(staff)
+
+# exercise 10
