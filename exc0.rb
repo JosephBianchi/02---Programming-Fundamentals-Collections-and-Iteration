@@ -218,3 +218,41 @@ p grocery_list
 
 p grocery_list.delete_at(-2)
 output_list(grocery_list)
+
+# exercise 9
+
+students_in = {
+  :cohort1 => 34,
+  :cohort2 => 42,
+  :cohort3 => 22
+}
+
+def cohort_display(students_hash)
+  students_hash.each {|cohort, number| puts "#{cohort}: #{number} students"}
+end
+
+students_in[:cohort4] = 43
+
+p students_in.keys
+
+five_percent_more_students = students_in.map {|cohort, number| number*1.05}
+
+cohort_display(five_percent_more_students)
+
+five_percent_more_students.delete_at(1)
+cohort_display(five_percent_more_students)
+
+# total_students = 0
+# five_percent_more_students.each {|cohort, students| total_students += students}
+# p total_students
+
+staff = {
+  finance: 32,
+  accounting: 5,
+  tech: 15,
+  cleaning: 18,
+  admin: 45,
+  HR: 453,
+}
+
+cohort_display(staff)
