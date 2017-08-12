@@ -191,3 +191,30 @@ end
 
 # exercise 8
 grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
+
+grocery_list.each {|grocery| p "* #{grocery}"}
+
+grocery_list << "rice"
+grocery_list.each {|grocery| p "*#{grocery}"}
+def output_list(grocery_list)
+  grocery_list.each {|grocery| p "*#{grocery}"}
+end
+
+p output_list(grocery_list)
+
+p grocery_list.count
+
+if grocery_list.include?("bananas")
+  p "You need bananas"
+else
+  p "You don't need bananas"
+end
+
+p grocery_list[2]
+
+output_list(grocery_list.sort)
+
+p grocery_list
+
+p grocery_list.delete_at(-2)
+output_list(grocery_list)
